@@ -12,25 +12,18 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                NavigationLink {
-                    SecondView()
-                } label: {
-                    Text("画面遷移")
-                }
-                
-                Button("モーダル遷移") {
-                    isShow = true
+            HStack {
+                Button("-") {
                     
                 }
-                .padding()
-                .sheet(isPresented: $isShow) {
-                    SecondView()
+                Text("Counter: ")
+                Button("+") {
+                    
                 }
 
             }
             .padding()
-            .navigationTitle("1")
+            .font(.title)
         }
     }
 }
