@@ -11,6 +11,7 @@
 		CDCDA20C2B4B9DA70086AC3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDA20B2B4B9DA70086AC3B /* ContentView.swift */; };
 		CDCDA20E2B4B9DA90086AC3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCDA20D2B4B9DA90086AC3B /* Assets.xcassets */; };
 		CDCDA2112B4B9DA90086AC3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCDA2102B4B9DA90086AC3B /* Preview Assets.xcassets */; };
+		CDCDA2182B4BD8D20086AC3B /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDA2172B4BD8D20086AC3B /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CDCDA20B2B4B9DA70086AC3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CDCDA20D2B4B9DA90086AC3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDCDA2102B4B9DA90086AC3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDCDA2172B4BD8D20086AC3B /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				CDCDA2092B4B9DA70086AC3B /* NavigationApp.swift */,
 				CDCDA20B2B4B9DA70086AC3B /* ContentView.swift */,
+				CDCDA2172B4BD8D20086AC3B /* SecondView.swift */,
 				CDCDA20D2B4B9DA90086AC3B /* Assets.xcassets */,
 				CDCDA20F2B4B9DA90086AC3B /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCDA2182B4BD8D20086AC3B /* SecondView.swift in Sources */,
 				CDCDA20C2B4B9DA70086AC3B /* ContentView.swift in Sources */,
 				CDCDA20A2B4B9DA70086AC3B /* NavigationApp.swift in Sources */,
 			);

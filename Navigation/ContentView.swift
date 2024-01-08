@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isShow = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                NavigationLink {
+                    SecondView()
+                } label: {
+                    Text("画面遷移")
+                }
+                
+                Button("モーダル遷移") {
+                    isShow = true
+                    
+                }
+                .padding()
+                .sheet(isPresented: $isShow) {
+                    SecondView()
+                }
+
+            }
+            .padding()
+            .navigationTitle("1")
         }
-        .padding()
     }
 }
 
