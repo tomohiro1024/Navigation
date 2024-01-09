@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isShow = false
+    @State var num = 0
     
     var body: some View {
         NavigationStack {
             HStack {
                 Button("-") {
+                    num = num - 1
                     
                 }
-                Text("Counter: ")
+                Text("Counter: \(num)")
                 Button("+") {
-                    
+                    num = num + 1
                 }
 
             }
