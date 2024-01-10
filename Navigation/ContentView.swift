@@ -10,45 +10,26 @@ import SwiftUI
 struct ContentView: View {
     @State var isShow = false
     @State var isShowDialog = false
-
+    
     var body: some View {
         
-            VStack {
-                Button("alart") {
-                    isShow = true
+        NavigationStack {
+            List {
+                HStack {
+                    Image(systemName: "circle")
+                    Text("買い物をする")
                 }
-                .padding()
-                
-                Button("Dialog") {
-                    isShowDialog = true
+                HStack {
+                    Image(systemName: "checkmark")
+                    Text("電車に乗る")
                 }
-                .padding()
-                
-            }
-            .padding()
-            .alert("警告", isPresented: $isShow) {
-                Button("OK", role: .destructive) {
-                    
-                }
-                Button("NG", role: .cancel) {
-                    
-                }
-            } message: {
-                Text("警告です")
-            }
-            .confirmationDialog("title", isPresented: $isShowDialog) {
-                Button("A") {
-                    
-                }
-                Button("X") {
-                    
-                }
-                Button("C") {
-                    
+                HStack {
+                    Image(systemName: "circle")
+                    Text("料理をする")
                 }
             }
-            
-        
+            .navigationTitle("TodoApp")
+        }
     }
 }
 
