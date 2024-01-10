@@ -8,45 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var num = 0
     @State var isShow = false
-    
-    var body: some View {
-        NavigationStack {
-            VStack {
-                HStack {
-                    Button("-") {
-                        num -= 1
-                        
-                    }
-                    Text("Counter: \(num)")
-                    Button("+") {
-                        num += 1
-                    }
+    @State var isShowDialog = false
 
+    var body: some View {
+        
+            VStack {
+                Button("alart") {
+                    isShow = true
                 }
                 .padding()
-                Button("画面遷移") {
-                    isShow = true
+                
+                Button("Dialog") {
+                    isShowDialog = true
+                }
+                .padding()
+                
+            }
+            .padding()
+            .alert("警告", isPresented: $isShow) {
+                Button("OK", role: .destructive) {
+                    
+                }
+                Button("NG", role: .cancel) {
+                    
+                }
+            } message: {
+                Text("警告です")
+            }
+            .confirmationDialog("title", isPresented: $isShowDialog) {
+                Button("A") {
+                    
+                }
+                Button("X") {
+                    
+                }
+                Button("C") {
                     
                 }
             }
-            .font(.title)
-            .sheet(isPresented: $isShow) {
-                MyView(count: $num)
-            }
-        }
-    }
-}
-
-struct MyView: View {
-    @Binding var count: Int
-    
-    var body: some View {
-        Button("+5") {
-            count += 5
             
-        }
+        
     }
 }
 
