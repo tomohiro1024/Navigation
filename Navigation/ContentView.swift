@@ -8,25 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isShow = false
-    @State var isShowDialog = false
+    @State var taskList = [(title: "買い物をする", isComp: false),
+                           (title: "電車に乗る", isComp: false),
+                           (title: "料理をする", isComp: false)]
     
     var body: some View {
         
         NavigationStack {
-            List {
-                HStack {
-                    Image(systemName: "circle")
-                    Text("買い物をする")
+            List(0..<taskList.count, id: \.self) { index in
+                Button {
+                    if(taskList[index].isComp == true) {
+                        taskList[index].isComp = false
+                    } else {
+                        taskList[index].isComp = true
+                    }
+                    
+                    
+                } label: {
+                    HStack {
+                        Image(systemName: taskList[index].isComp == true ? "checkmark.seal.fill" : "circle")
+                        Text(taskList[index].title)
+                    }
                 }
-                HStack {
-                    Image(systemName: "checkmark")
-                    Text("電車に乗る")
-                }
-                HStack {
-                    Image(systemName: "circle")
-                    Text("料理をする")
-                }
+                .foregroundColor(.primary)
+                
+                
+                
             }
             .navigationTitle("TodoApp")
         }
